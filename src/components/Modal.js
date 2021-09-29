@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 
-export default function Modal({ show }) {
+export default function Modal() {
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => {
-    console.log("btn click");
     setShowModal(true);
   };
-
-  const handleModalClose = () => {
+  const closeModal = () => {
     setShowModal(false);
   };
 
@@ -17,14 +15,23 @@ export default function Modal({ show }) {
       <button type="button" id="modalBtn" onClick={handleClick}>
         Click to open Modal
       </button>
-      <div id="myModal" class="modal">
-        {/* Modal content */}
-        <div className="modal-content">
-          <span className="close" onClick={handleModalClose}>
-            &times;
-          </span>
-          <p>Some text in the Modal..</p>
-        </div>
+      {/* pass the state to component as props */}
+      {showModal ? <ModalInner closeModal={closeModal} /> : null}
+    </div>
+  );
+}
+
+// destructure the props
+function ModalInner({ closeModal }) {
+  return (
+    <div id="myModal" className="modal">
+      {/* Modal content */}
+      <div className="modal-content">
+        {/* pass the props value to the event handler */}
+        <span className="close" onClick={closeModal}>
+          &times;
+        </span>
+        <p>Some text in the Modal..</p>
       </div>
     </div>
   );
