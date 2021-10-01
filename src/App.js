@@ -3,6 +3,8 @@ import { FilterableProductTable } from "./components/FilterableProductTable";
 import Greeting from "./components/Greeting";
 import Modal from "./components/Modal";
 import Hooks from "./components/Hooks";
+import ProgressBar from "./components/ProgressBar";
+import FetchData from "./components/FetchData";
 import logo from "./static/logo.svg";
 import "./styles/App.css";
 
@@ -14,7 +16,7 @@ function App() {
         <img src={logo} alt="" className="App-logo" />
       </header>
       <main>
-        <section className="react">
+        {/* <section className="react">
           <h2>Filterable Products Table</h2>
           <FilterableProductTable />
         </section>
@@ -38,6 +40,16 @@ function App() {
             <em>Check console to see lifecycle and logs</em>
           </p>
           <Hooks />
+        </section>
+        <hr />
+        <section className="react">
+          <h2>Progress Bar</h2>
+          <ProgressBar seconds={10}/>
+        </section>
+        <hr /> */}
+        <section className="react">
+          <h2>Fetching data (fetch, Axios, Axios async/await)</h2>
+          <FetchData/>
         </section>
       </main>
     </div>
