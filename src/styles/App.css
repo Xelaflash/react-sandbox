@@ -114,3 +114,16 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Hooks section */
+
+.hooks {
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.disclaimer {
+  font-size: 0.8em;
+  color: red;
+  text-align: center;
+}

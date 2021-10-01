@@ -6,9 +6,9 @@ export default function Modal() {
   const handleClick = () => {
     setShowModal(true);
   };
-  const closeModal = () => {
-    setShowModal(false);
-  };
+  // const onCloseModal = () => {
+  //   setShowModal(false);
+  // };
 
   return (
     <div style={{ textAlign: "center" }}>
@@ -16,19 +16,19 @@ export default function Modal() {
         Click to open Modal
       </button>
       {/* pass the state to component as props */}
-      {showModal ? <ModalInner closeModal={closeModal} /> : null}
+      {showModal ? <ModalInner onCloseModal={() => setShowModal(false)} /> : null}
     </div>
   );
 }
 
 // destructure the props
-function ModalInner({ closeModal }) {
+function ModalInner({ onCloseModal }) {
   return (
     <div id="myModal" className="modal">
       {/* Modal content */}
       <div className="modal-content">
         {/* pass the props value to the event handler */}
-        <span className="close" onClick={closeModal}>
+        <span className="close" onClick={onCloseModal}>
           &times;
         </span>
         <p>Some text in the Modal..</p>
