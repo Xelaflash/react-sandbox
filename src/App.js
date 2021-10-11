@@ -7,6 +7,9 @@ import ProgressBar from "./components/ProgressBar";
 import FetchData from "./components/FetchData";
 import logo from "./static/logo.svg";
 import "./styles/App.css";
+import Itw1 from './components/Itw1'
+import twittImg from './images/Screenshot 2021-10-11 at 08.06.47.png';
+import reRender from './images/re-render.png';
 
 function App() {
   return (
@@ -46,10 +49,44 @@ function App() {
           <h2>Progress Bar</h2>
           <ProgressBar seconds={10}/>
         </section>
-        <hr /> */}
+        <hr />
         <section className="react">
           <h2>Fetching data (fetch, Axios, Axios async/await)</h2>
-          <FetchData/>
+          <FetchData />
+        </section>
+        <hr />*/}
+        <section className="react" id="itw1">
+          <h2>React Itw Question (re-rendering)</h2>
+          <p>
+            <strong>
+              ❓ React interview question. When incrementing the count,{" "}
+              "SomeComponent" :{" "}
+            </strong>{" "}
+            <br />
+            a. Will re-render each time <br />
+            b. Won't re-render at all because it doesn't consume the count
+            variable
+          </p>
+          <img
+            src={twittImg}
+            alt="React code for Itw question"
+            className="twittImg"
+          />
+          <Itw1 />
+          <p>
+            Answer is :<strong>Yes!!!!</strong>
+          </p>
+          <blockquote>
+            <strong>
+              Every time the state of a component changes, that component and
+              all of its children are re-rendered.
+            </strong>
+          </blockquote>
+          <img
+            src={reRender}
+            alt="React re-rendering diagram"
+            className="twittImg"
+          />
         </section>
       </main>
     </div>

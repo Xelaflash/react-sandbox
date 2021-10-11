@@ -141,7 +141,7 @@
   border-radius: 5px;
   border: none;
   text-align: center;
-  font-weight:bold;
+  font-weight: bold;
 }
 .loadBtn:hover {
   opacity: 0.8;
@@ -157,4 +157,16 @@
   height: 100%;
   width: 0%;
   background-color: orange;
+}
+
+/* react itw question */
+.twittImg {
+  width: 500px;
+  margin: auto;
+  display: block;
+}
+#itw1 {
+  margin: 10px auto;
+  width: fit-content;
+  line-height: 1.5;
 }
